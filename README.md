@@ -71,5 +71,5 @@ pod 'XLJNewFeature', '~> 1.0.0'
 
 ######如果觉得可以，请star这是对我一种鼓励，让我知道我应该更加努力把她做的更加完善。
 
-####PS:![Alt Text](https://github.com/marlonxlj/newFeaturesx/blob/7436eb1c6dc20fb0f08bee265908bdc6e94f6ff4/2016-10-14%2014_20_14.gif)
+####PS:![Alt Text](https://github.com/marlonxlj/newFeaturesx/blob/master/ddd.gif)
 
