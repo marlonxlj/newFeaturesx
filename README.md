@@ -71,4 +71,4 @@ pod 'XLJNewFeature', '~> 1.0.0'
 
 ######如果觉得可以，请star这是对我一种鼓励，让我知道我应该更加努力把她做的更加完善。
 
-####PS: ![2016-10-14 14_20_14](https://pan.baidu.com/s/1kV6nwDx)
+####PS:[](https://pan.baidu.com/s/1kV6nwDx)
