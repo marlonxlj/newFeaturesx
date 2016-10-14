@@ -50,14 +50,14 @@ pod 'XLJNewFeature', '~> 1.0.0'
 >self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 >
 >
->    ViewController *homeVC = [[ViewController alloc] init];
->    
->    XLJNewFetureController *newVC = [[XLJNewFetureController alloc] initWithNSArray:self.mArray withButtonSize:CGSizeMake(120, 80) withButtonTitle:@"开启旅行" withButtonImage:@"functionGuideBt1" withButtonTitleColor:[UIColor orangeColor] withButtonHeight:0.87 withViewController:homeVC];
->    
->    self.window.rootViewController = newVC;
+>   ViewController *homeVC = [[ViewController alloc] init];
+>   
+>   XLJNewFetureController *newVC = [[XLJNewFetureController alloc] initWithNSArray:self.mArray withButtonSize:CGSizeMake(120, 80) withButtonTitle:@"开启旅行" withButtonImage:@"functionGuideBt1" withButtonTitleColor:[UIColor orangeColor] withButtonHeight:0.87 withViewController:homeVC];
+>   
+>   self.window.rootViewController = newVC;
 >
 >
->    [self.window makeKeyAndVisible];
+>   [self.window makeKeyAndVisible];
 
 
 
@@ -71,4 +71,4 @@ pod 'XLJNewFeature', '~> 1.0.0'
 
 ######如果觉得可以，请star这是对我一种鼓励，让我知道我应该更加努力把她做的更加完善。
 
-####PS: ![2016-10-14 14_20_14](/Users/x/Desktop/2016-10-14 14_20_14.gif)
+####PS: ![2016-10-14 14_20_14](https://pan.baidu.com/s/1kV6nwDx)
