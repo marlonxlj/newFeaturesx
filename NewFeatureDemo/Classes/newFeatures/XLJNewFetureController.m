@@ -90,17 +90,6 @@ static NSString * const reuseIdentifier = @"CellIdentfifier";
     return _collectionView;
 }
 #pragma mark -- 重新赋值
-- (instancetype)initWithNSArray:(NSMutableArray *)array withButton:(XLJExButton *)startButton withButtonHeight:(CGFloat)startHeight withViewController:(UIViewController *)controller
-{
-    if (self = [super init]) {
-        self.mArray = array;
-        self.starHeightButton = startHeight;
-        self.homeViewController = controller;
-    }
-    
-    return self;
-}
-
 - (instancetype)initWithNSArray:(NSMutableArray *)array withButtonSize:(CGSize)buttonSize withButtonTitle:(NSString *)buttonTitle withButtonImage:(NSString *)imageName withButtonTitleColor:(UIColor *)titleColor withButtonHeight:(CGFloat)startHeight withViewController:(UIViewController *)controller
 {
     if (self = [super init]) {
@@ -203,6 +192,11 @@ static NSString * const reuseIdentifier = @"CellIdentfifier";
     self.pageControl.currentPage = (int)(scrollView.contentOffset.x / scrollView.frame.size.width + 0.5);
 }
 
+#pragma mark - 禁止横屏幕
+- (BOOL)shouldAutorotate
+{
+    return NO;
+}
 @end
 
 

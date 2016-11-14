@@ -10,6 +10,7 @@
 #import "XLJNewFetureController.h"
 #import "ViewController.h"
 
+#define XLJVersion @"LocationVersion"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) NSMutableArray *mArray;
@@ -31,12 +32,13 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
  
 
-    ViewController *homeVC = [[ViewController alloc] init];
+//    ViewController *homeVC = [[ViewController alloc] init];
+//    
+//    XLJNewFetureController *newVC = [[XLJNewFetureController alloc] initWithNSArray:self.mArray withButtonSize:CGSizeMake(120, 80) withButtonTitle:@"开启旅行" withButtonImage:@"functionGuideBt1" withButtonTitleColor:[UIColor orangeColor] withButtonHeight:0.87 withViewController:homeVC];
+//    
+//    self.window.rootViewController = newVC;
     
-    XLJNewFetureController *newVC = [[XLJNewFetureController alloc] initWithNSArray:self.mArray withButtonSize:CGSizeMake(120, 80) withButtonTitle:@"开启旅行" withButtonImage:@"functionGuideBt1" withButtonTitleColor:[UIColor orangeColor] withButtonHeight:0.87 withViewController:homeVC];
-    
-    self.window.rootViewController = newVC;
-    
+    [self chooseRootViewController:self.window];
     
     [self.window makeKeyAndVisible];
     
@@ -65,6 +67,38 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+- (void)chooseRootViewController:(UIWindow *)window
+{
+    //1 获取当前版本号
+    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"];
+    
+    //2 获取上一次的版本号
+    NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:XLJVersion];
+    
+    if ([currentVersion isEqualToString:lastVersion]) {//没有最新的版本号
+        //创建tabBarVc
+        UIViewController *vc = [[UIViewController alloc] init];
+        
+        //        设置窗口的根控制器
+        window.rootViewController = vc;
+        
+    }else{//有最新的版本号
+        //进入新特性界面
+        
+        UIViewController *vc = [[UIViewController alloc] init];
+        
+        XLJNewFetureController *NewFeatureVC = [[XLJNewFetureController alloc] initWithNSArray:self.mArray withButtonSize:CGSizeMake(120, 100) withButtonTitle:nil withButtonImage:@"anniu" withButtonTitleColor:[UIColor redColor] withButtonHeight:0.87 withViewController:vc];
+        
+        window.rootViewController = NewFeatureVC;
+
+        //保存当前版本号，用偏好设置
+        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:XLJVersion];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+}
+
 
 
 @end
