@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "XLJNewFeature"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "一行代码实现新特性功能"
 
   # This description is used to generate tags and improve search results.
