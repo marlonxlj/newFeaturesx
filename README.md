@@ -4,13 +4,16 @@
 
 ####支持pod导入
 
+```
 pod 'XLJNewFeature', '~> 1.0.2'
+
+```
 
 如果发现pod search XLJNewFeature 搜索出来的不是最新版本，需要在终端执行cd转换文件路径命令退回到desktop，然后执行pod setup命令更新本地spec缓存（可能需要几分钟），然后再搜索就可以了。
 
 ####更新记录:
 
-2016-11-14 
+###★★★2016-11-14 ★★★
 
 1.更新横屏问题，目前是禁止横屏.
 
@@ -18,7 +21,7 @@ pod 'XLJNewFeature', '~> 1.0.2'
 
 3.建议最后一页的按钮使用图片，而不用自己写文字信息。
 
-2016-10-14 
+###★★★2016-10-14 ★★★
 
  第一次更新，进行功能添加。
 
@@ -57,6 +60,8 @@ pod 'XLJNewFeature', '~> 1.0.2'
 
 ####初始化方法
 
+>
+>```
 >self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 >
 >
@@ -68,6 +73,7 @@ pod 'XLJNewFeature', '~> 1.0.2'
 >
 >
 >   [self.window makeKeyAndVisible];
+> ```
 
 
 
@@ -79,7 +85,7 @@ pod 'XLJNewFeature', '~> 1.0.2'
 
 ★★★★★★★★★★
 
-######如果觉得可以，请star这是对我一种鼓励，让我知道我应该更加努力把她做的更加完善。
+#####如果觉得可以，请star这是对我一种鼓励，让我知道我应该更加努力把她做的更加完善。
 
 ####PS:
 
